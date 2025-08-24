@@ -1,0 +1,59 @@
+.footer {
+  background-color: #7a0c0c; /* dark red background */
+  color: white;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+}
+
+.brand h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.column h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+}
+
+.column ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.column ul li a:hover {
+  color: #ffcccb;
+}
+
+.appButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appButtons img {
+  height: 43px;
+  width: 165px;
+  cursor: pointer;
+}

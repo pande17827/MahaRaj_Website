@@ -1,0 +1,29 @@
+.header {
+  background-color: #7a0c0c; /* dark red background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ffcccb; /* lighter red on hover */
+}

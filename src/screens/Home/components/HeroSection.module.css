@@ -1,0 +1,140 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+/* Left Content */
+.left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.badge {
+  display: inline-block;
+  background: #7a0c0c;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 800;
+  margin: 20px 0;
+  color: #000;
+}
+
+.description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.primaryBtn {
+  background: #7a0c0c;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.primaryBtn:hover {
+  background: #5e0808;
+}
+
+.secondaryBtn {
+  background: transparent;
+  border: 2px solid #7a0c0c;
+  color: #7a0c0c;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.secondaryBtn:hover {
+  background: #fdf0f0;
+}
+
+/* Right Content */
+.right {
+  flex: 1;
+  min-width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 410px;
+  background: #7a0c0c;
+  border-radius: 100%;
+  top:120px;
+  z-index: 1;
+}
+
+.chefImage {
+  position: relative;
+  width: 300px;
+  z-index: 2;
+}
+
+/* Floating Cards */
+.card {
+  position: absolute;
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+}
+
+.icon {
+  color: #7a0c0c;
+  font-size: 20px;
+}
+
+/* Card Positions */
+.cardTopLeft {
+  top: 20px;
+  left: 0;
+}
+
+.cardTopRight {
+  top: 60px;
+  right: 0;
+}
+
+.cardBottomLeft {
+  bottom: 80px;
+  left: 0;
+}
+
+.cardBottomRight {
+  bottom: 20px;
+  right: 0;
+}
