@@ -1,0 +1,241 @@
+:root {
+  --maroon: #7a0c0c;
+  --maroon-dark: #5e0808;
+  --card-r: 18px;
+}
+
+.wrapper {
+  background: var(--maroon);
+  color: #fff;
+  padding: 40px 24px 64px;
+}
+
+.header {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto 28px;
+  padding: 0 12px;
+}
+
+.title {
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  font-size: clamp(14px, 1.8vw, 18px);
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Carousel shell */
+.carousel {
+  position: relative;
+  max-width: 1280px;
+  margin: 16px auto 0;
+  padding: 10px 48px; /* space for arrows */
+  
+}
+
+/* Scrollable track */
+.track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 12px 2px 12px;
+  list-style: none;
+  margin: 0;
+}
+
+/* Hide scrollbars (keeps accessibility) */
+.track::-webkit-scrollbar { height: 0; }
+.track { scrollbar-width: none; }
+
+/* Card */
+.card {
+  scroll-snap-align: start;
+  flex: 0 0 300px;
+  background: #fff;
+  color: #0b0c0b;
+  border-radius: var(--card-r);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+/* Top media area */
+.media {
+  position: relative;
+  height: 350px; /* space for maroon panel + overlap */
+  border-top-left-radius: var(--card-r);
+  border-top-right-radius: var(--card-r);
+  overflow: visible;
+}
+
+.mediaBg {
+  background: yellow;
+  height: 350px;
+  border-top-left-radius: var(--card-r);
+  border-top-right-radius: var(--card-r);
+}
+
+/* Chef photo overlapping upwards */
+.photo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -8px;
+  width: 78%;
+  height: auto;
+  object-fit: contain;
+  /* allows head to pop out visually like reference */
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.2));
+}
+
+/* Content */
+.content {
+  padding: 10px 16px 16px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.cuisine {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: #6b6b6b;
+}
+
+.rate {
+  text-align: right;
+  font-size: 13px;
+  color: #2a2a2a;
+  white-space: nowrap;
+}
+
+.rate strong {
+  font-size: 14px;
+}
+
+.per {
+  color: #7a7a7a;
+  margin-left: 2px;
+}
+
+/* Rating row */
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.star {
+  color: #f6c320;
+  font-size: 14px;
+}
+
+.rating {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.reviews {
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+/* Blurb */
+.blurb {
+  margin: 8px 0 14px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: #6b6b6b;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.book,
+.profile {
+  flex: 1;
+  height: 36px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s;
+}
+
+.book {
+  background: var(--maroon);
+  color: #fff;
+  border: 0;
+  box-shadow: 0 6px 14px rgba(122, 12, 12, 0.25);
+}
+
+.book:hover { background: var(--maroon-dark); transform: translateY(-1px); }
+
+.profile {
+  background: #fff;
+  color: #1a1a1a;
+  border: 1.5px solid #d1d1d1;
+}
+
+.profile:hover { transform: translateY(-1px); }
+
+/* Arrow buttons */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: var(--maroon);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.prev { left: 6px; }
+.next { right: 6px; }
+
+.nav:active { transform: translateY(-50%) scale(0.98); }
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .card { flex-basis: 280px; }
+}
+
+@media (max-width: 760px) {
+  .carousel { padding: 8px 36px; }
+  .card { flex-basis: 260px; }
+  .media { height: 200px; }
+  .mediaBg { height: 150px; }
+}
+
+@media (max-width: 520px) {
+  .carousel { padding: 0 28px; }
+  .card { flex-basis: 80%; } /* show one-at-a-time feel */
+}

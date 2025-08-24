@@ -1,0 +1,143 @@
+/* Using a general-purpose font for demonstration */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.chooseContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    gap: 3rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Section - Cards */
+.leftSection {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 450px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Staggered effect for cards */
+.card1, .card4 {
+    position: relative;
+    top: 2rem;
+}
+
+.iconWrapper {
+    background-color: #8C1B1B;
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.card p {
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Right Section - Text Content */
+.rightSection {
+    flex: 1.2;
+    padding-left: 2rem;
+}
+
+.rightSection h1 {
+    color: #D3B8B8;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    letter-spacing: 2px;
+}
+
+.rightSection h2 {
+    color: #8C1B1B;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1.5rem;
+}
+
+.rightSection p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2rem;
+}
+
+.exploreButton {
+    background-color: #8C1B1B;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.exploreButton:hover {
+    background-color: #701616;
+    transform: scale(1.05);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 992px) {
+    .chooseContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leftSection {
+        margin-bottom: 3rem;
+    }
+
+    .rightSection {
+        padding-left: 0;
+    }
+
+    .rightSection h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leftSection {
+       grid-template-columns: 1fr;
+    }
+
+    /* Remove staggering on single column layout */
+    .card1, .card4 {
+        top: 0;
+    }
+}
