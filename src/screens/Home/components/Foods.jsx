@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./food.module.css";
+import styles from "./Foods.module.css";
 
 import dish1 from "../assets/image/food.png"; // Paneer curry
 import dish2 from "../assets/image/food.png"; // Chicken biryani

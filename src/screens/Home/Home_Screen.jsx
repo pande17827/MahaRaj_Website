@@ -4,7 +4,9 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
-import Food from "./components/food";
+// import Food from "./components/Food";
+// import Food from "./components/Foods"
+import Foods from "./components/Foods"
 import Meet_Expert from "./components/Meet_Expert";
 import Choose from "./components/Choose";
 import Why from "./components/Why";
@@ -18,7 +20,7 @@ const Home_Screen = () => {
         {/* <p>This is vikas here</p> */}
         <Header></Header>
         <HeroSection></HeroSection>
-        <Food></Food>
+        <Foods></Foods>
         <Meet_Expert></Meet_Expert>
         <Choose></Choose>
         <Why></Why>
